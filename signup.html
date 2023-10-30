@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: powderblue;
+        }
+
+        .container {
+            background-color: #3EB489;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color:red;
+        }
+
+        label {
+            font-weight: bold;
+            font-color:blue;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="/signup" method='POST'>
+        {% csrf_token %}
+        <div class="container">
+            <h1>Sign Up</h1>
+            <hr><br><br>
+            <label for="fname"><b>First Name</b></label><br><br>
+            <input type="text" placeholder="Enter the first name" name="fname" id="fname" required><br><br>
+
+            <label for="lname"><b>Last Name</b></label><br><br>
+            <input type="text" placeholder="Enter the last name" name="lname" id="lname" required><br><br>
+
+            <label for="email"><b>Email</b></label><br><br>
+            <input type="text" placeholder="Enter the email" name="email" id="email" required><br><br>
+
+            <label for="phoneNo"><b>Phone No.</b></label><br><br>
+            <input type="text" placeholder="Enter the phone no." name="phoneNo" id="phoneNo" required><br><br>
+
+            <label for="username"><b>User Name</b></label><br><br>
+            <input type="text" placeholder="Enter the user name" name="username" id="username" required><br><br>
+
+            <label for="pass1"><b>Password</b></label><br><br>
+            <input type="password" placeholder="Enter the Password" name="pass1" id="pass1" required><br><br>
+
+            <label for="pass2"><b>Confirm Password</b></label><br><br>
+            <input type="password" placeholder="Confirmation Password" name="pass2" id="pass2" required><br><br>
+
+            <input type="submit" value="Sign Up">
+            <p>Already have an account? <a href="/signin">Login</a></p>
+
+        </div>
+    </form>
+</body>
+</html>

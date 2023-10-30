@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form in HTML and CSS</title>
+    <style>
+        /* Your internal CSS rules go here */
+        body {
+            background-image: url('background.jpg')
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .wrapper {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-box {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+    </style>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form in HTML and CSS</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                background-color:#1589FF;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+            }
+    
+            .wrapper {
+                color:brown;
+                width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .input-box {
+                margin: 10px 0;
+                border: 1px solid #ccc; /* Add border to input-box */
+                padding: 10px;
+                border-radius: 5px;
+                color:#00008B;
+                background-color:pink;
+            }
+    
+            label {
+                display: block;
+                font-weight: bold;
+            }
+    
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            .btn {
+                width: 100%;
+                padding: 10px;
+                background-color: brown;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <form action="/signin/" method="POST" id="loginForm">
+                {%csrf_token%}
+               
+                <h1><i>Login And Registration Form</i></h1>
+                <div class="input-box">
+                    <label for="username">USERNAME:-</label><br>
+                    <input type="text" id="username" placeholder="USERNAME" name="username" required>
+                    <i class="bx bxs-user"></i>
+                </div><br>
+                <div class="input-box">
+                    <label for="pass1">PASSWORD:-</label><br>
+                    <input type="password" id="pass1" placeholder="PASSWORD" name="pass1" required>
+                    <i class="bxs-lock-alt"></i>
+                </div><br>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label><br>
+                    <a href="{% url 'password_reset' %}">Forgot Password?</a><br>
+                </div><br>
+    
+                <button type="submit" class="btn" style="background-color: blue;" id="loginButton">Login</button>
+            </form>
+        </div>
+    </body>
+    </html>

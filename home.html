@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0077b6;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end;  /* Align buttons to the right */
+    margin-top: 20px;  /* Adjust the margin as needed */
+}
+
+.button-container button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 0 10px; /* Add margin between buttons */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-container button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+section
+{
+    text-align:center;
+    color: green;
+    size:10px;
+}   
+h1{
+    color:red;
+}
+ </style>
+</head>
+<body>
+    <header>
+        
+        <h1>Welcome to My Website</h1>
+        
+    </header>
+    <div class="images">
+    <img src="p.jpg" alt="Image Description" width="300" height="200">
+    
+    <div class="button-container">
+        <button><a href="/signup">Sign Up</a></button>
+        <button><a href="/signin">Sign In</a></button>
+    </div>
+    
+
+    <main>
+        <section>
+            <h2>Featured Content</h2>
+            <p>Welcome to our website. This is the homepage, and here you can find some featured content.
+                
+            </p><br><br>
+            <div id="welcome-message" style="background-color: #f0f0f0; padding: 10px; text-align: center;">
+                <h1>Welcome to My Website!</h1>
+                <p>Discover the best content and services we have to offer.</p>
+                <button onclick="closeWelcomeMessage()">Close</button>
+            </div><br>
+        
+            
+            <script>
+               
+                function closeWelcomeMessage() {
+                    var welcomeMessage = document.getElementById("welcome-message");
+                    welcomeMessage.style.display = "none";
+                }
+            </script>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website</p>
+        <h1>This is Sagar Adlinge.</h1> 
+        <h1>This is my first codenerea project.</h1>
+    </footer>
+</body>
+</html>
+
